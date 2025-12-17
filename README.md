@@ -49,10 +49,6 @@ This final section covered how to analyze application-specific protocols and sea
 
 ---
 
-### Project Metadata
-
 * **Author:** Joan
-* **Lab:** Wireshark Packet Analysis
-* **Course:** Google Cybersecurity Professional Certificate
 
 ---
