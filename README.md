@@ -1,6 +1,6 @@
 # Network Traffic Analysis & Protocol Dissection (Wireshark)
 
-## Technical Objective: Deep Packet Inspection for Incident Response
+### Technical Objective: Deep Packet Inspection for Incident Response
 
 ---
 
@@ -56,9 +56,9 @@ This final section covered how to analyze application-specific protocols and sea
 ## What I Learned
 - Protocol Hierarchies: Gained hands-on experience navigating the encapsulated layers of a packet, specifically focusing on TCP flags and DNS query structures.
 
-- Filtering Logic: Mastered the use of Wireshark display filters (ip.addr, eth.addr, udp.port) to isolate targeted traffic in high-volume captures.
+- Filtering Logic: Mastered the use of Wireshark display filters (`ip.addr`, `eth.addr`, `udp.port`) to isolate targeted traffic in high-volume captures.
 
-- Payload Forensics: Learned to use content string searches (e.g., tcp contains "curl") to identify specific tools or commands used within the network stream.
+- Payload Forensics: Learned to use content string searches (e.g., `tcp contains "curl"`) to identify specific tools or commands used within the network stream.
 
 - Logical Troubleshooting: Applied a systematic approach to decapsulating traffic to find the "who, what, and where" of a network event.
 
