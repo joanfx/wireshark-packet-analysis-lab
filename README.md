@@ -4,8 +4,10 @@
 
 ---
 
-## Scenario
+## Scenario:
 As a security analyst, I was tasked with investigating a network capture to identify specific communication patterns between internal and external assets. Using Wireshark, I performed a deep dive into the OSI layers—from MAC addresses at the Data Link layer to application-specific protocols like DNS and HTTP—to verify traffic integrity and search for indicators of compromise (IoC).
+
+---
 
 ## 1. Task 1: Initial Traffic Ingestion & Global Overview
 
