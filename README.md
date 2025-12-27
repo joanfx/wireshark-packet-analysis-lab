@@ -1,10 +1,13 @@
-# Wireshark Lab: Step-by-Step Procedure
+# Network Traffic Analysis & Protocol Dissection (Wireshark)
 
-This guide documents the exact actions and commands used in the "Analyze your first packet with Wireshark" lab, broken down into the four main tasks.
+## Technical Objective: Deep Packet Inspection for Incident Response
 
 ---
 
-## 1. Task 1: Opening the File and Overview
+## Scenario
+As a security analyst, I was tasked with investigating a network capture to identify specific communication patterns between internal and external assets. Using Wireshark, I performed a deep dive into the OSI layers—from MAC addresses at the Data Link layer to application-specific protocols like DNS and HTTP—to verify traffic integrity and search for indicators of compromise (IoC).
+
+## 1. Task 1: Initial Traffic Ingestion & Global Overview
 
 This task was about loading the data and getting a basic view of the traffic.
 
@@ -14,7 +17,7 @@ This task was about loading the data and getting a basic view of the traffic.
 
 ---
 
-## 2. Task 2: Basic Filtering and Packet Layers
+## 2. Task 2: TCP/IP Layer Analysis & Handshake Verification
 
 This task focused on using the first filter and inspecting the deep structure of a single packet.
 
@@ -26,7 +29,7 @@ This task focused on using the first filter and inspecting the deep structure of
 
 ---
 
-## 3. Task 3: Focused Filters (IP and MAC)
+## 3. Task 3: Hardware-Level Tracking & Source Attribution
 
 This task involved using more specific filters to track traffic by source or hardware address.
 
@@ -38,7 +41,7 @@ This task involved using more specific filters to track traffic by source or har
 
 ---
 
-## 4. Task 4 & 5: Application Layer Deep Dive
+## 4. Task 4 & 5: Application Layer Forensics & Payload Inspection
 
 This final section covered how to analyze application-specific protocols and search the raw data.
 
@@ -46,6 +49,16 @@ This final section covered how to analyze application-specific protocols and sea
 2.  **Inspect DNS Query:** Double-clicked a DNS packet and expanded the **Domain Name System (query)** subtree to find the website name requested (`opensource.google.com`).
 3.  **Filter for HTTP:** Entered the filter `tcp.port == 80` to find unencrypted web traffic.
 4.  **Search the Data Payload:** Entered the content search filter `tcp contains "curl"` to find packets that included that specific text string in the data section.
+
+---
+## What I Learned
+- Protocol Hierarchies: Gained hands-on experience navigating the encapsulated layers of a packet, specifically focusing on TCP flags and DNS query structures.
+
+- Filtering Logic: Mastered the use of Wireshark display filters (ip.addr, eth.addr, udp.port) to isolate targeted traffic in high-volume captures.
+
+- Payload Forensics: Learned to use content string searches (e.g., tcp contains "curl") to identify specific tools or commands used within the network stream.
+
+- Logical Troubleshooting: Applied a systematic approach to decapsulating traffic to find the "who, what, and where" of a network event.
 
 ---
 
